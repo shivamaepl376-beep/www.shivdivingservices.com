@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shiv Diving and Marine Services | Safety • Depth • Reliability</title>
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --primary-navy: #06192e;
+      --ocean-blue: #0284c7;
+      --teal-accent: #00bcd4;
+      --light-bg: #f4f8fb;
+      --card-bg: #ffffff;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(6, 25, 46, 0.95);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      border-bottom: 2px solid var(--ocean-blue);
+    }
+
+    .navbar {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0.8rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #fff;
+    }
+
+    .brand-logo img {
+      height: 48px;
+      width: auto;
+      border-radius: 6px;
+      object-fit: contain;
+    }
+
+    .brand-text h2 {
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .brand-text span {
+      font-size: 0.65rem;
+      color: var(--teal-accent);
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #cbd5e1;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--teal-accent);
+    }
+
+    .btn-quote {
+      background: linear-gradient(135deg, var(--ocean-blue), var(--teal-accent));
+      color: #fff !important;
+      padding: 8px 18px;
+      border-radius: 25px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background: linear-gradient(rgba(6, 25, 46, 0.82), rgba(6, 25, 46, 0.9)),
+                  url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      padding: 120px 20px;
+      text-align: center;
+      color: #ffffff;
+    }
+
+    .hero-content {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(0, 188, 212, 0.2);
+      border: 1px solid var(--teal-accent);
+      color: var(--teal-accent);
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      line-height: 1.25;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #e2e8f0;
+      margin-bottom: 2rem;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--teal-accent);
+      color: var(--primary-navy);
+    }
+
+    .btn-primary:hover {
+      background: #00e5ff;
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      border: 2px solid #ffffff;
+      color: #ffffff;
+    }
+
+    .btn-secondary:hover {
+      background: #ffffff;
+      color: var(--primary-navy);
+      transform: translateY(-2px);
+    }
+
+    /* Section Header */
+    .section-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 2.2rem;
+      color: var(--primary-navy);
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: var(--ocean-blue);
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      color: var(--text-muted);
+      margin-top: 10px;
+      font-size: 1rem;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 30px 25px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(2, 132, 199, 0.15);
+      border-color: var(--teal-accent);
+    }
+
+    .service-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(2, 132, 199, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      color: var(--ocean-blue);
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: var(--primary-navy);
+    }
+
+    .service-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Gallery Section */
+    .gallery-filter {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      border: none;
+      background: #e2e8f0;
+      padding: 8px 18px;
+      border-radius: 20px;
+      font-weight: 600;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--ocean-blue);
+      color: #fff;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 240px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(6, 25, 46, 0.9) 10%, transparent);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 16px;
+      color: white;
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    /* Vacancy / Careers Section */
+    .careers-section {
+      background: #eef4f9;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .job-cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .job-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-left: 5px solid var(--ocean-blue);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .job-header h3 {
+      font-size: 1.2rem;
+      color: var(--primary-navy);
+    }
+
+    .job-tag {
+      background: #e0f2fe;
+      color: var(--ocean-blue);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+
+    .job-details {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 16px;
+    }
+
+    .job-details span {
+      margin-right: 15px;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* Modal Styling */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: #ffffff;
+      border-radius: 12px;
+      max-width: 500px;
+      width: 100%;
+      padding: 30px;
+      position: relative;
+      animation: modalFadeIn 0.3s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .close-modal {
+      position: absolute;
+      right: 20px;
+      top: 18px;
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: var(--text-muted);
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: var(--text-dark);
+    }
+
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--ocean-blue);
+    }
+
+    /* Contact Section */
+    .contact-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .contact-info h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: var(--primary-navy);
+    }
+
+    .info-item {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 20px;
+      align-items: center;
+    }
+
+    .info-item i {
+      font-size: 1.3rem;
+      color: var(--ocean-blue);
+      width: 30px;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary-navy);
+      color: #94a3b8;
+      text-align: center;
+      padding: 25px 20px;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-wa {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background-color: #25d366;
+      color: #fff;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+      z-index: 1000;
+      transition: var(--transition);
+    }
+
+    .floating-wa:hover {
+      transform: scale(1.1);
+      color: #fff;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero h1 { font-size: 2.1rem; }
+      .contact-wrapper { grid-template-columns: 1fr; padding: 25px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header>
+    <div class="navbar">
+      <a href="#" class="brand-logo">
+        <!-- Logo file placeholder: Replace 'logo.png' with your downloaded logo file name -->
+        <img src="logo.png" alt="Shiv Diving Logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2830/2830305.png'">
+        <div class="brand-text">
+          <h2>SHIV DIVING & MARINE SERVICES</h2>
+          <span>SAFETY • DEPTH • RELIABILITY</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact" class="btn-quote">Get a Quote</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="hero-badge"><i class="fa-solid fa-anchor"></i> PROFESSIONAL UNDERWATER SERVICES</span>
+      <h1>SHIV DIVING AND MARINE SERVICES</h1>
+      <p>Precision Underwater Engineering, Commercial Diving, Hull Cleaning, and Certified Offshore Marine Solutions.</p>
+      <div class="hero-buttons">
+        <a href="#services" class="btn btn-primary"><i class="fa-solid fa-water"></i> Our Services</a>
+        <a href="#careers" class="btn btn-secondary"><i class="fa-solid fa-user-plus"></i> We Are Hiring</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section-container">
+    <div class="section-title">
+      <h2>About Our Company</h2>
+      <p>Delivering top-tier commercial diving and marine engineering with utmost safety standards.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; align-items: center;">
+      <div>
+        <p style="margin-bottom: 15px; color: var(--text-dark); font-size: 1.05rem;">
+          <strong>Shiv Diving and Marine Services</strong> is a premier commercial diving contractor providing specialized underwater repair, maintenance, and marine inspection services.
+        </p>
+        <p style="color: var(--text-muted); margin-bottom: 20px;">
+          Backed by trained divers, advanced underwater imaging systems, and strict international safety protocols, we guarantee precision, durability, and on-time project execution for ports, offshore vessels, dams, and marine pipelines.
+        </p>
+        <div style="display: flex; gap: 20px;">
+          <div><h3 style="color: var(--ocean-blue); font-size: 1.8rem;">100%</h3><p style="font-size: 0.85rem;">Safety Record</p></div>
+          <div><h3 style="color: var(--ocean-blue); font-size: 1.8rem;">24/7</h3><p style="font-size: 0.85rem;">Emergency Marine Support</p></div>
+          <div><h3 style="color: var(--ocean-blue); font-size: 1.8rem;">Certified</h3><p style="font-size: 0.85rem;">Expert Divers</p></div>
+        </div>
+      </div>
+      <div>
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=800&q=80" alt="Commercial Diving Operation" style="width: 100%; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1);">
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" style="background-color: #fff;" class="section-container">
+    <div class="section-title">
+      <h2>Marine & Diving Services</h2>
+      <p>Comprehensive underwater operational capabilities tailored for marine assets.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-ship"></i></div>
+        <h3>Underwater Hull Cleaning</h3>
+        <p>Propeller polishing, sea chest clearance, and high-efficiency hull fouling removal to maximize fuel efficiency.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-camera"></i></div>
+        <h3>Underwater Inspection & CCTV</h3>
+        <p>Class-approved CCTV visual inspections, NDT ultrasonic thickness gauging, and damage assessment reports.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-fire-burner"></i></div>
+        <h3>Underwater Cutting & Welding</h3>
+        <p>Certified wet welding and thermal lance cutting for structural offshore repairs, cofferdams, and piles.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-life-ring"></i></div>
+        <h3>Marine Salvage & Recovery</h3>
+        <p>Wreck removal, heavy underwater rigging, sunken asset retrieval, and rapid salvage intervention.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-bridge-water"></i></div>
+        <h3>Dam & Intake Maintenance</h3>
+        <p>Hydroelectric dam gate inspection, silt dredging, valve replacements, and trash rack clearing.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon"><i class="fa-solid fa-helmet-safety"></i></div>
+        <h3>Civil Marine Construction</h3>
+        <p>Underwater piling, pipeline laying, cable stabilization, jetty repair, and quay wall maintenance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Gallery Section -->
+  <section id="gallery" class="section-container">
+    <div class="section-title">
+      <h2>Project Gallery</h2>
+      <p>Explore glimpses of our underwater operations and completed marine contracts.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="gallery-filter">
+      <button class="filter-btn active" onclick="filterGallery('all')">All Operations</button>
+      <button class="filter-btn" onclick="filterGallery('inspection')">Inspections</button>
+      <button class="filter-btn" onclick="filterGallery('welding')">Welding & Repair</button>
+      <button class="filter-btn" onclick="filterGallery('salvage')">Salvage</button>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item" data-category="inspection">
+        <img src="https://images.unsplash.com/photo-1682687220063-4742bd7fd538?auto=format&fit=crop&w=700&q=80" alt="Hull Inspection">
+        <div class="gallery-overlay">
+          <h4>Vessel Hull Inspection</h4>
+          <small>Ultrasonic thickness gauge testing</small>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="welding">
+        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80" alt="Underwater Welding">
+        <div class="gallery-overlay">
+          <h4>Underwater Piling Welding</h4>
+          <small>Deep sea certified wet welding</small>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="salvage">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?auto=format&fit=crop&w=700&q=80" alt="Salvage Rigging">
+        <div class="gallery-overlay">
+          <h4>Anchor & Asset Recovery</h4>
+          <small>Heavy lift rigging and salvage</small>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="inspection">
+        <img src="https://images.unsplash.com/photo-1582967788606-a171c1080cb0?auto=format&fit=crop&w=700&q=80" alt="Pipeline Survey">
+        <div class="gallery-overlay">
+          <h4>Subsea Pipeline Survey</h4>
+          <small>Deep trench video logging</small>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="welding">
+        <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=700&q=80" alt="Propeller Cleaning">
+        <div class="gallery-overlay">
+          <h4>Propeller Polishing & Repair</h4>
+          <small>Direct underwater blade restoration</small>
+        </div>
+      </div>
+      <div class="gallery-item" data-category="salvage">
+        <img src="https://images.unsplash.com/photo-1544552866-d3ed42536cfd?auto=format&fit=crop&w=700&q=80" alt="Dam Maintenance">
+        <div class
